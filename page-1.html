@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MotoGear</title>
+    <link rel="stylesheet" href="page-1.css">
+</head>
+<body>
+    <div id="page1">
+        <div class="menu-container">
+            <div class="menu-icon" onclick="toggleMenu()">
+                <div class="menu-bar1"></div>
+                <div class="menu-bar2"></div>
+                <div class="menu-bar3"></div>
+            </div>
+        <div id="menu" class="side-menu">
+            <a href="https://twitter.com" target="_blank"><img src="photos/twitter.png" alt="Twitter"></a>
+            <a href="https://instagram.com" target="_blank"><img src="photos/instagram.png" alt="Instagram"></a>
+            <a href="mailto:your-email@example.com"><img src="photos/gmail.png" alt="Gmail"></a>
+            <a href="https://facebook.com" target="_blank"><img src="photos/facebook.png" alt="Facebook"></a>
+        </div>
+    </div>
+
+    <div class="header">
+        <a href="#" class="logo"><img src="photos/logo.jpg" alt="MotoGear Logo"></a>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#overview" class="nav-link">Overview</a></li>
+                <li><a href="#products" class="nav-link">Products</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Contact us</a></li>
+            </ul>
+        </nav>
+    </div>
+
+        <section id="home">
+            <div class="text-content">
+                <h1>MotoGear</h1>
+                <p class="firstP">The Best Accessories Seller</p>
+                <p class="secondP">At MotoGear, we understand that every rider deserves the best. Our mission is to provide top-notch motorcycle 
+                    accessories that not only enhance your bike's performance but also add a personalized touch.
+                     From durable protective gear to stylish upgrades, we offer products that combine innovation, quality, and comfort.
+                      Whether you're cruising the streets or exploring the open road, MotoGear ensures you're equipped for the ride ahead.</p>
+                <button class="order-now">Order now</button>
+            </div>
+            <div class="product-showcase">
+                <img src="photos/Gloves.jpg" alt="Product 1" class="product-img">
+
+                <div class="product-arrows">
+                    <button id="arrow" class="arrow left" onclick="prevProduct()">&#8592;</button>
+                    <button id="arrow" class="arrow right" onclick="nextProduct()">&#8594;</button>
+                    <a href="#products">See more</a>
+                </div>
+            </div>
+        </section>
+    </div>
+ 
+    <section id="overview">
+       
+            <h1>What do we provide?</h1>
+            <p id="provided">At MotoGear, we provide top-quality motorcycle accessories designed to enhance your riding experience,
+                 whether you're a city rider, a long-distance traveler, or an occasional weekend rider.
+                Our products are crafted to meet the needs of every type of rider: From protective gears
+                 that ensure your safety to custom parts that boost your bike's performance, we've got it all.
+            </p>
+            <div class="product-descriptions">
+                <div class="product-type">
+                    <img src="photos/Helmet.jpg" alt="Product Type 1">
+                    <h3>Helmets</h3>
+                    <p>Best-in-class helmets for safety and style.</p>
+                    <a href="#products">See more</a>
+                </div>
+                <div class="product-type">
+                    <img src="photos/Glove.jpg" alt="Product Type 2">
+                    <h3>Gloves</h3>
+                    <p>Durable and comfortable riding gloves.</p>
+                    <a href="#products">See more</a>
+                </div>
+                <div class="product-type">
+                    <img src="photos/Covers.jpg" alt="Product Type 3">
+                    <h3>Covers</h3>
+                    <p>High-performance covers for all-weather protection.</p>
+                    <a href="#products">See more</a>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section id="products">
+
+
+            
+    <header>
+        <div class="search-container">
+            <input type="text" id="search" placeholder="Search..." oninput="searchProducts()">
+            <button id="cart-button" onclick="showCart()">Cart (<span id="cart-count">0</span>)</button>
+        </div>
+    </header>
+
+    <section class="product-slider">
+        <button class="prev">&#10094;</button>
+        <div class="product-container">
+        </div>
+        <button class="next">&#10095;</button>
+    </section>
+
+    <div id="cart-modal" class="modal" style="display:none;">
+        <div class="modal-content">
+            <span class="close" onclick="closeCart()">&times;</span>
+            <h2>Cart Items</h2>
+            <div id="cart-items">
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2024 Motorcycle Gear Shop. All rights reserved.</p>
+    </footer>
+
+
+        </section>
+
+
+    <script src="page-1.js"></script>
+</body>
+</html>
